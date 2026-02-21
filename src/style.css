@@ -8,6 +8,7 @@
 
 :root {
   --wa-btn: #5c2d91;
+  --wa-btn-hover: #4f267d;
   --font-family: "Montserrat", sans-serif;
   --title-color: #00016;
 }
@@ -27,6 +28,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -57,11 +62,17 @@ body {
 
 .wa_btn_header {
   display: flex;
+  align-items: center;
   background-color: var(--wa-btn);
   gap: 5px;
   padding: 12px 20px;
   width: fit-content;
   border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.wa_btn_header:hover {
+  background-color: var(--wa-btn-hover);
 }
 
 .text_btn_header {
@@ -119,13 +130,14 @@ body {
 }
 
 .title {
-  font-size: 49px;
-  font-weight: 80 0;
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .paragraph {
   max-width: 500px;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
