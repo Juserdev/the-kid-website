@@ -1,5 +1,6 @@
 import whatsappIcon from '../public/whatsapp.svg?raw'
 import taskAlt from '../public/task_alt.svg?raw'
+import heroVideo from './assets/videos/video.mp4'
 
 const main_body = document.createElement("main")
 main_body.classList.add("main")
@@ -91,9 +92,9 @@ video.loop = true;
 video.playsInline = true;
 
 
-const source = document.createElement("source");
-source.src = "../public/video.mp4";
-source.type = "video/mp4";
+const source = document.createElement("source")
+source.src = heroVideo
+source.type = "video/mp4"
 
 video.appendChild(source)
 
