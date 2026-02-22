@@ -1,13 +1,15 @@
+import { content } from './content/content'
+
 const footer = document.createElement("footer")
 footer.classList.add("footer")
 
 const company = document.createElement("p")
 company.classList.add("company")
-company.textContent = "The Kid Studio BTL"
+company.textContent = content.footer.company
 
 const copyright = document.createElement("p")
 copyright.classList.add("copyright")
-copyright.textContent = "© 2026 Todos los derechos reservados."
+copyright.textContent = content.footer.copyright
 
 
 footer.appendChild(company)

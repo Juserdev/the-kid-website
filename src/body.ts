@@ -1,6 +1,4 @@
-import whatsappIcon from '../public/whatsapp.svg?raw'
-import taskAlt from '../public/task_alt.svg?raw'
-import heroVideo from './assets/videos/video.mp4'
+import { content } from './content/content'
 
 const main_body = document.createElement("main")
 main_body.classList.add("main")
@@ -12,9 +10,9 @@ const info_tags_container = document.createElement("div")
 info_tags_container.classList.add("info_tags_container")
 
 const tags = [
-  { text: "ACTIVACIONES", class_1: "tag", class_2: "tag_1" },
-  { text: "INCENTIVOS", class_1: "tag", class_2: "tag_2" },
-  { text: "EXPERIENCIA", class_1: "tag", class_2: "tag_3" },
+  { text: content.main.first_tags.tag_1, class_1: "tag", class_2: "tag_1" },
+  { text: content.main.first_tags.tag_2, class_1: "tag", class_2: "tag_2" },
+  { text: content.main.first_tags.tag_3, class_1: "tag", class_2: "tag_3" },
 ]
 
 tags.forEach(tag => {
@@ -31,30 +29,30 @@ texts_container.classList.add("texts_container")
 
 const title = document.createElement("h1")
 title.classList.add("title")
-title.textContent = "Las mejores ideas empiezan jugando."
+title.textContent = content.main.title
 
 const paragraph = document.createElement("p")
 paragraph.classList.add("paragraph")
-paragraph.textContent = "Nos gustan las ideas inquietas, las marcas valientes y los proyectos que no se parecen a los demás. Estamos preparando algo nuevo, pero ya podemos empezar contigo."
+paragraph.textContent = content.main.description
 
 texts_container.appendChild(title)
 texts_container.appendChild(paragraph)
 
 const wa_btn_header = document.createElement("a")
-wa_btn_header.href = "https://wa.me/573165296938"
+wa_btn_header.href = content.whatsapp_link
 wa_btn_header.classList.add("wa_btn_header")
-wa_btn_header.innerHTML = whatsappIcon
+wa_btn_header.innerHTML = content.icons.whatsapp_icon
 
 const text_btn_main = document.createElement("span")
-text_btn_main.textContent = "Juguemos juntos"
+text_btn_main.textContent = content.main.btn_text
 text_btn_main.classList.add("text_btn_header")
 
 wa_btn_header.appendChild(text_btn_main)
 
 const down_tags = [
-  { icon: taskAlt, text: "Producción integral" },
-  { icon: taskAlt, text: "Medición de impacto" },
-  { icon: taskAlt, text: "Retorno de Experiencia" },
+  { icon: content.icons.task_icon, text: content.main.second_labels.tag_1 },
+  { icon: content.icons.task_icon, text: content.main.second_labels.tag_2 },
+  { icon: content.icons.task_icon, text: content.main.second_labels.tag_3 },
 ]
 
 const down_tags_container = document.createElement("div")
@@ -90,13 +88,7 @@ video.autoplay = true;
 video.muted = true;
 video.loop = true;
 video.playsInline = true;
-
-
-const source = document.createElement("source")
-source.src = heroVideo
-source.type = "video/mp4"
-
-video.appendChild(source)
+video.src = content.main.video
 
 right_container.appendChild(video)
 
