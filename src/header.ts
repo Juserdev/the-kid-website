@@ -6,7 +6,7 @@ const header = document.createElement("header")
 header.classList.add("header")
 
 const a_logo = document.createElement("a")
-a_logo.href = "#"
+a_logo.href = "wa.me/573165296938"
 a_logo.classList.add("a_logo")
 
 const logo = document.createElement("img")

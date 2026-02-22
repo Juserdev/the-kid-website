@@ -41,7 +41,7 @@ texts_container.appendChild(title)
 texts_container.appendChild(paragraph)
 
 const wa_btn_header = document.createElement("a")
-wa_btn_header.href = "#"
+wa_btn_header.href = "wa.me/573165296938"
 wa_btn_header.classList.add("wa_btn_header")
 wa_btn_header.innerHTML = whatsappIcon
 
