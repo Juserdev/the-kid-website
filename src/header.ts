@@ -3,12 +3,15 @@ import { content } from './content/content'
 const header = document.createElement("header")
 header.classList.add("header")
 
+const container_header = document.createElement("div")
+container_header.classList.add('container-header')
+
 const a_logo = document.createElement("a")
 a_logo.href = "#"
 a_logo.classList.add("a_logo")
 
 const logo = document.createElement("img")
-logo.src = content.header.logo_img
+logo.src = content.main.logo.logo_img
 logo.alt = content.header.logo_alt
 logo.classList.add("logo")
 
@@ -18,7 +21,7 @@ const links_divs = document.createElement("div")
 links_divs.classList.add("links_divs")
 
 const a_mail = document.createElement("a")
-a_mail.href = `mailto:${content.email}`
+a_mail.href = content.email_send
 a_mail.innerHTML = content.icons.mail_icon
 a_mail.classList.add("a_mail")
 
@@ -44,7 +47,8 @@ links_divs.appendChild(a_mail)
 links_divs.appendChild(wa_btn_header)
 
 
-header.appendChild(a_logo)
-header.appendChild(links_divs)
+container_header.appendChild(a_logo)
+container_header.appendChild(links_divs)
+header.appendChild(container_header)
 
 export { header }
