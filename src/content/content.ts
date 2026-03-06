@@ -1,12 +1,14 @@
 import type { Content } from './content.types'
 import logo from '../../public/Logo.png'
+import logo_white from '../../public/logo-white.png'
 import whatsapp_icon from '../../public/whatsapp.svg?raw'
 import mail_icon from '../../public/mail.svg?raw'
 import task_alt from '../../public/task_alt.svg?raw'
 import hero from '../assets/videos/video.mp4'
 
 export const content = {
-  email: "gerencia@thekid.com.co",
+  email: "info@thekid.com.co",
+  email_send: "mailto:carlos.valbuena@thekidstudio.com.co",
   whatsapp_link: "https://wa.me/573165296938",
   icons: {
     whatsapp_icon: whatsapp_icon,
@@ -20,9 +22,10 @@ export const content = {
   },
   main: {
     first_tags: {
-      tag_1: "ACTIVACIONES",
-      tag_2: "INCENTIVOS",
-      tag_3: "EXPERIENCIA"
+      tag_1: "Strategy & Advertising",
+      tag_2: "Account Management",
+      tag_3: "Production & Craft",
+      tag_4: "Digital Content & Development"
     },
     title: "Las mejores ideas empiezan jugando.",
     description: "Nos gustan las ideas inquietas, las marcas valientes y los proyectos que no se parecen a los demás. Estamos preparando algo nuevo, pero ya podemos empezar contigo.",
@@ -32,10 +35,15 @@ export const content = {
       tag_2: "Medición de impacto",
       tag_3: "Retorno de Experiencia"
     },
-    video: hero
+    video: hero,
+    logo: {
+      logo_img: logo_white,
+      logo_alt: 'the kid white',
+    }
+
   },
   footer: {
-    company: "The Kid Studio BTL",
+    company: "The Kid Studio",
     copyright: "© 2026 Todos los derechos reservados.",
   }
 } satisfies Content

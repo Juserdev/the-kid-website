@@ -13,6 +13,7 @@ const tags = [
   { text: content.main.first_tags.tag_1, class_1: "tag", class_2: "tag_1" },
   { text: content.main.first_tags.tag_2, class_1: "tag", class_2: "tag_2" },
   { text: content.main.first_tags.tag_3, class_1: "tag", class_2: "tag_3" },
+  { text: content.main.first_tags.tag_4, class_1: "tag", class_2: "tag_4" },
 ]
 
 tags.forEach(tag => {
@@ -38,9 +39,53 @@ paragraph.textContent = content.main.description
 texts_container.appendChild(title)
 texts_container.appendChild(paragraph)
 
+// const wa_btn_header = document.createElement("a")
+// wa_btn_header.href = content.whatsapp_link
+// wa_btn_header.classList.add("wa_btn_header")
+// wa_btn_header.innerHTML = content.icons.whatsapp_icon
+
+// const text_btn_main = document.createElement("span")
+// text_btn_main.textContent = content.main.btn_text
+// text_btn_main.classList.add("text_btn_header")
+
+// wa_btn_header.appendChild(text_btn_main)
+
+// const down_tags = [
+//   { icon: content.icons.task_icon, text: content.main.second_labels.tag_1 },
+//   { icon: content.icons.task_icon, text: content.main.second_labels.tag_2 },
+//   { icon: content.icons.task_icon, text: content.main.second_labels.tag_3 },
+// ]
+
+// const down_tags_container = document.createElement("div")
+// down_tags_container.classList.add("down_tags_container")
+
+// down_tags.forEach(down_tag => {
+//   const container = document.createElement("div")
+//   container.classList.add("down_container")
+//   container.innerHTML = down_tag.icon
+
+//   const span = document.createElement("span")
+//   span.classList.add("down_task_text")
+//   span.textContent = down_tag.text
+
+//   container.appendChild(span)
+//   down_tags_container.appendChild(container)
+// })
+
+left_container.appendChild(info_tags_container)
+left_container.appendChild(texts_container)
+// left_container.appendChild(wa_btn_header)
+// left_container.appendChild(down_tags_container)
+
+// RIGHT CONTAINER
+
+
+const right_container = document.createElement("div")
+right_container.classList.add("right_container")
+
 const wa_btn_header = document.createElement("a")
 wa_btn_header.href = content.whatsapp_link
-wa_btn_header.classList.add("wa_btn_header")
+wa_btn_header.classList.add("wa_btn_header", "wa_btn_main")
 wa_btn_header.innerHTML = content.icons.whatsapp_icon
 
 const text_btn_main = document.createElement("span")
@@ -49,48 +94,24 @@ text_btn_main.classList.add("text_btn_header")
 
 wa_btn_header.appendChild(text_btn_main)
 
-const down_tags = [
-  { icon: content.icons.task_icon, text: content.main.second_labels.tag_1 },
-  { icon: content.icons.task_icon, text: content.main.second_labels.tag_2 },
-  { icon: content.icons.task_icon, text: content.main.second_labels.tag_3 },
-]
-
-const down_tags_container = document.createElement("div")
-down_tags_container.classList.add("down_tags_container")
-
-down_tags.forEach(down_tag => {
-  const container = document.createElement("div")
-  container.classList.add("down_container")
-  container.innerHTML = down_tag.icon
-
-  const span = document.createElement("span")
-  span.classList.add("down_task_text")
-  span.textContent = down_tag.text
-
-  container.appendChild(span)
-  down_tags_container.appendChild(container)
-})
-
-left_container.appendChild(info_tags_container)
-left_container.appendChild(texts_container)
-left_container.appendChild(wa_btn_header)
-left_container.appendChild(down_tags_container)
-
-// RIGHT CONTAINER
+const logo = document.createElement('img')
+logo.src = content.main.logo.logo_img
+logo.alt = content.main.logo.logo_alt
+logo.classList.add('logo-main')
 
 
-const right_container = document.createElement("div")
-right_container.classList.add("right_container")
+// const video = document.createElement("video")
+// video.classList.add("hero_video")
+// video.autoplay = true;
+// video.muted = true;
+// video.loop = true;
+// video.playsInline = true;
+// video.src = content.main.video
 
-const video = document.createElement("video")
-video.classList.add("hero_video")
-video.autoplay = true;
-video.muted = true;
-video.loop = true;
-video.playsInline = true;
-video.src = content.main.video
+// right_container.appendChild(video)
 
-right_container.appendChild(video)
+right_container.appendChild(logo)
+right_container.appendChild(wa_btn_header)
 
 main_body.appendChild(left_container)
 main_body.appendChild(right_container)
