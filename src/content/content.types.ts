@@ -8,9 +8,13 @@ export interface Content {
     task_icon: string
   }
   header: {
-    logo_img: string,
-    logo_alt: string,
+    logo_img: string
+    logo_alt: string
     btn_text: string
+    icon: {
+      scrolldown: string
+      icon_atl: string
+    }
   }
   main: {
     first_tags: {

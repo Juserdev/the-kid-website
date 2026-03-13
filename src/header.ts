@@ -49,6 +49,8 @@ links_divs.appendChild(wa_btn_header)
 
 container_header.appendChild(a_logo)
 container_header.appendChild(links_divs)
+
 header.appendChild(container_header)
+
 
 export { header }
