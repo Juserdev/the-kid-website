@@ -1,4 +1,5 @@
-import { content } from './content/content'
+import { content } from "./config/content.config"
+
 
 const header = document.createElement("header")
 header.classList.add("header")
@@ -47,9 +48,9 @@ links_divs.appendChild(a_mail)
 links_divs.appendChild(wa_btn_header)
 
 
+
 container_header.appendChild(a_logo)
 container_header.appendChild(links_divs)
-
 header.appendChild(container_header)
 
 

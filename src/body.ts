@@ -1,4 +1,5 @@
-import { content } from './content/content'
+import { content } from "./config/content.config"
+
 
 const main_body = document.createElement("main")
 main_body.classList.add("main")
@@ -90,7 +91,7 @@ wa_btn_header.innerHTML = content.icons.whatsapp_icon
 
 const text_btn_main = document.createElement("span")
 text_btn_main.textContent = content.main.btn_text
-text_btn_main.classList.add("text_btn_header")
+text_btn_main.classList.add("text_btn_main")
 
 wa_btn_header.appendChild(text_btn_main)
 
@@ -99,6 +100,7 @@ logo.src = content.main.logo.logo_img
 logo.alt = content.main.logo.logo_alt
 logo.classList.add('logo-main')
 
+left_container.appendChild(wa_btn_header)
 
 // const video = document.createElement("video")
 // video.classList.add("hero_video")
@@ -111,7 +113,6 @@ logo.classList.add('logo-main')
 // right_container.appendChild(video)
 
 right_container.appendChild(logo)
-right_container.appendChild(wa_btn_header)
 
 main_body.appendChild(left_container)
 main_body.appendChild(right_container)

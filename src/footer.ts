@@ -1,4 +1,4 @@
-import { content } from './content/content'
+import { content } from "./config/content.config"
 
 const footer = document.createElement("footer")
 footer.classList.add("footer")
